@@ -9,7 +9,16 @@
  * @version 1.0
  */
 class Json
-{
+{	
+/**
+	 * decode
+	 *
+	 * Decodes a JSON string and returns resulting object/array.
+	 * If decode operation fails the function will return FALSE, unlike the 
+	 * default implementation which returns NULL. The issue being a valid 
+	 * decode can also return NULL, meaning the JSON string was syntactically 
+	 * correct but just empty.
+	 */
 	public static function decode($string, $assoc = FALSE)
 	{
 		$decode_result = @json_decode($string, $assoc);
