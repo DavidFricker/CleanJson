@@ -3,7 +3,7 @@
  * JSON Wrapper Class
  *
  * This class is a simple wrapper around PHP's JSON functions.
- * It aims to make error detection and parsing simpler than.
+ * It aims to make error detection and parsing simpler.
  * 
  * @author David Fricker, davidfricker.com
  * @version 1.0
