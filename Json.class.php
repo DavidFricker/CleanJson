@@ -10,7 +10,7 @@
  */
 class Json
 {	
-/**
+	/**
 	 * decode
 	 *
 	 * Decodes a JSON string and returns resulting object/array.
