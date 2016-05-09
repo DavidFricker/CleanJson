@@ -1,13 +1,14 @@
 # CleanJson
 A simple wrapper around PHP's JSON functions giving a simple approach to error checking on decode.
-All methods are static so an example useage would be as follows:
 
 ## Example
+All methods are static so an example useage would be as follows:
 ````
 <?php
   if(Json::decode("{}", false) === false)
   {
     // string does not contain valid JSON data.
+    echo Json::get_error_message();
   }
 ?>
 ````
