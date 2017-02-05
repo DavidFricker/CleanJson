@@ -1,0 +1,13 @@
+{
+    "name":"davidfricker/cleanjson",
+    "description":"A simple wrapper around PHP's Json functions giving a simple approach to error checking on decode.",
+    "license": "MIT",
+    "require":{
+        "php":"^5.3.3 || ^7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "davidfricker\\cleanjson\\": "src"
+        }
+    }
+}

@@ -1,4 +1,5 @@
 <?php
+namespace DavidFricker\CleanJson;
 /**
  * JSON Wrapper Class
  *
@@ -8,7 +9,7 @@
  * @author David Fricker, davidfricker.com
  * @version 1.0
  */
-class Json
+class CleanJson
 {	
 	/**
 	 * decode
