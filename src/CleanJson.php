@@ -9,8 +9,7 @@ namespace DavidFricker\CleanJson;
  * @author David Fricker, davidfricker.com
  * @version 1.0
  */
-class CleanJson
-{	
+class CleanJson {	
 	/**
 	 * decode
 	 *
@@ -20,26 +19,21 @@ class CleanJson
 	 * decode can also return NULL, meaning the JSON string was syntactically 
 	 * correct but just empty.
 	 */
-	public static function decode($string, $assoc = FALSE)
-	{
+	public static function decode ($string, $assoc = FALSE) {
 		$decode_result = @json_decode($string, $assoc);
-		if($decode_result === NULL && json_last_error() !== JSON_ERROR_NONE)
-		{
+		if($decode_result === NULL && json_last_error() !== JSON_ERROR_NONE) {
 		    return FALSE;
 		}
 
 		return $decode_result;
 	}
 
-	public static function encode($object)
-	{
+	public static function encode ($object) {
 		return json_encode($object);
 	}
 
-	private static function legacy_get_error_message()
-	{
-		switch(json_last_error())
-		{
+	private static function legacy_get_error_message () {
+		switch(json_last_error()) {
 		    case JSON_ERROR_NONE:
 		        $message = 'No errors.';
 		    	break;
@@ -66,10 +60,8 @@ class CleanJson
 		return $message;
 	}
 
-	public static function get_error_message()
-	{
-		if(!function_exists('json_last_error_msg'))
-		{
+	public static function get_error_message () {
+		if (!function_exists('json_last_error_msg')) {
 			return slef::legacy_get_error_message();
 		}
 
