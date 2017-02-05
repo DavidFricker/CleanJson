@@ -36,7 +36,7 @@ class CleanJson
         return json_encode($object);
     }
 
-    private static function legacy_get_error_message()
+    private static function legacyGetErrorMessage()
     {
         switch (json_last_error()) {
             case JSON_ERROR_NONE:
@@ -65,7 +65,7 @@ class CleanJson
         return $message;
     }
 
-    public static function get_error_message()
+    public static function getErrorMessage()
     {
         if (!function_exists('json_last_error_msg')) {
             return slef::legacy_get_error_message();
